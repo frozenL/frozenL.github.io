@@ -1,8 +1,8 @@
-#Personal website
+# Personal website
 Jekyll + architect theme
 
 TODO:
--- css/ not needed?
--- udpate badminton
--- ??
+* css/ not needed?
+* udpate badminton
+* ??
 
