@@ -46,4 +46,4 @@ Each of our team has matches every week against other college, below are the res
 </table>
 
 ---
-[Go to Medwards Badminton](https://frozenl.github.io/2017/11/01/welcome-to-medwards-badminton-2017.html)
+[Go to Medwards Badminton](https://frozenl.github.io/2017/11/02/welcome-to-medwards-badminton-2017.html)
