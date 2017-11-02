@@ -25,7 +25,7 @@ Each of our team has matches every week against other college, below are the res
   <td> 6:3 </td>
   <td> 22 Oct 2017 </td>
   <td> Fitzwilliam </td>
-  <td> 8:1 </td>
+  <td> 1:8 </td>
 </tr>
 <tr>
   <td> 28 Oct 2017 </td>
