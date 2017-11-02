@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Murray Edwards Badminton
-date: 2017-11-01
+date: 2017-11-02
 ---
 Heya! Welcome to Murray Edwards Badminton Club!
 
