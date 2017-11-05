@@ -39,7 +39,15 @@ Each of our team has matches every week against other college, below are the res
   <td> 29 Oct 2017 </td>
   <td> Queen's </td>
   <td> 6:3 </td>
-  <td>  </td>
+  <td> 4 Nov 2017 </td>
+  <td> Homerton </td>
+  <td> 4:5 </td>
+</tr>
+<tr>
+  <td> 5 Nov 2017 </td>
+  <td> Downing </td>
+  <td> 4:5 </td>
+  <td>  </td>
   <td>  </td>
   <td>  </td>
 </tr>
