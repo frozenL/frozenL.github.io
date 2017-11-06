@@ -47,9 +47,9 @@ Each of our team has matches every week against other college, below are the res
   <td> 5 Nov 2017 </td>
   <td> Downing </td>
   <td> 4:5 </td>
-  <td>  </td>
-  <td>  </td>
-  <td>  </td>
+  <td> 5 Nov 2017 </td>
+  <td> Newnham II </td>
+  <td> 7:2 </td>
 </tr>
 </table>
 
