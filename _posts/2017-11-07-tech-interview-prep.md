@@ -10,5 +10,6 @@ Contributions welcome! (if you accidentally discovered this page :)) )
 
 ## System Design
 * ['System design preparation' from shashank88 on Github](https://github.com/shashank88/system_design)
+* ['system design interview' from checkcheckzz on Github](https://github.com/checkcheckzz/system-design-interview)
 * [Grokking the System Design Interview](https://www.educative.io/collection/5668639101419520/5649050225344512)
 * [System design for tech interviews](https://www.hiredintech.com/classrooms/system-design/lesson/52)
