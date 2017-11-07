@@ -14,3 +14,6 @@ Contributions welcome! (if you accidentally discovered this page :)) )
 * [Grokking the System Design Interview](https://www.educative.io/collection/5668639101419520/5649050225344512)
 * [System design for tech interviews](https://www.hiredintech.com/classrooms/system-design/lesson/52)
 * [Scalability for Dummies](http://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones)
+
+## Design Patterns
+* [Top 18 Java Design Pattern Interview Questions Answers for Experienced](http://www.java67.com/2012/09/top-10-java-design-pattern-interview-question-answer.html)
