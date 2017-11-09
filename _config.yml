@@ -23,7 +23,9 @@ github_username:  frozenL
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-architect
+theme: jacman
+stylus:
+    compress: true
 plugins:
   - jekyll-feed
 
