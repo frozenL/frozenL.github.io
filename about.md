@@ -4,5 +4,6 @@ title: About
 permalink: /about/
 ---
 
-a compsci not actively finding a job
+I'm a compsci not actively finding a job
 
+But passionate about interview preparations

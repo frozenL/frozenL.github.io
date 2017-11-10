@@ -2,6 +2,7 @@
 layout: post
 title: Murray Edwards Badminton
 date: 2017-11-02
+permalink: medwardsBadminton/
 ---
 Heya! Welcome to Murray Edwards Badminton Club!
 
@@ -17,7 +18,6 @@ Angel
 
 Useful links:
 ---
-* [Inter-college match results](https://frozenl.github.io/2017/11/01/medwards-badminton-results.html)
+* [Inter-college match results]({{ site.baseurl }}{% post_url /medwardsBadminton/2017-11-01-medwards-badminton-results %})
 * [League Table of Ladies' League](https://docs.google.com/spreadsheets/d/1W_T1vBfNiEZCobFlYzL8xmw_9U1fHIEjHDhrb-v32yM/edit#gid=1578323067)
 * Subscribe to our mailing list [here](https://lists.cam.ac.uk) and then search "newhall-badminton-members".
-

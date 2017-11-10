@@ -2,6 +2,7 @@
 layout: post
 title: Murray Edwards Badminton Result
 date: 2017-11-01
+categories: medwardsBadminton
 ---
 Each of our team has matches every week against other college, below are the results :)
 
@@ -54,4 +55,4 @@ Each of our team has matches every week against other college, below are the res
 </table>
 
 ---
-[Go to Medwards Badminton](https://frozenl.github.io/2017/11/02/welcome-to-medwards-badminton-2017.html)
+[Go to Medwards Badminton]({{ site.baseurl }}{% link medwardsBadminton/welcome-to-medwards-badminton-2017.md %})
