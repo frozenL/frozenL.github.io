@@ -3,14 +3,19 @@ layout: default
 title: Sisi
 ---
 <div class="blurb">
-	<h1>Hi!</h1>
-	<p> <a href="/about">Read more about my life...</a></p>
-    <ul>
+  <h1>Hi!</h1>
+  <h2>Here are the links to Medwards related posts. </h2>
+  <h3> <a href = "{{ site.baseurl }}{% link medwardsBadminton/welcome-to-medwards-badminton-2017.md %}"> 2017 Murray Edwards Badminton </a></h3>
+  <ul class = "dashed">
+    <li><a href = "{{ site.baseurl }}{% post_url /medwardsBadminton/2017-11-01-medwards-badminton-results %}"> Medwards Badminton Results </a></li>
+  </ul>
+  <h2>My personal posts are as follows:</h2>
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+    {% if post.categories contains "medwardsBadminton" %}{% else %}
+      <h2><a href="{{ post.url }}">{{ post.title }}</a> {{ post.categories }}</h2>
+    {% endif %}
   {% endfor %}
 </ul>
+<hr>
+<p> <a href="/about">Read more about ...?</a></p>
 </div><!-- /.blurb -->
-
