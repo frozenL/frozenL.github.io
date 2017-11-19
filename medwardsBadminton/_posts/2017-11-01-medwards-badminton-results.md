@@ -56,9 +56,17 @@ Each of our team has matches every week against other college, below are the res
   <td> 11 Nov 2017 </td>
   <td> Peterhouse </td>
   <td> 8:1 </td>
+  <td> 18 Nov 2017 </td>
+  <td> Robinson </td>
+  <td> 6:3 </td>
+</tr>
+<tr>
   <td>  </td>
   <td>  </td>
   <td>  </td>
+  <td> 19 Nov 2017 </td>
+  <td> Churchill </td>
+  <td> 2:7 </td>
 </tr></table>
 
 ---
