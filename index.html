@@ -9,7 +9,7 @@ title: Sisi
   <ul class = "dashed">
     <li><a href = "{{ site.baseurl }}{% post_url /medwardsBadminton/2017-11-01-medwards-badminton-results %}"> Medwards Badminton Results </a></li>
   </ul>
-  <h2>My personal posts are as follows:</h2>
+  <h2>My personal posts are as follows: (highly unstructured)</h2>
   {% for post in site.posts %}
     {% if post.categories contains "medwardsBadminton" %}{% else %}
       <h2><a href="{{ post.url }}">{{ post.title }}</a> {{ post.categories }}</h2>
