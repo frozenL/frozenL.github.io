@@ -7,3 +7,8 @@ TODO:
 * udpate badminton
 * ??
 
+local:
+---
+bundle exec jekyll build
+
+bundle exec jekyll serve
