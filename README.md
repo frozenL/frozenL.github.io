@@ -4,7 +4,7 @@ Jekyll + architect theme
 TODO:
 -----
 * css/ not needed?
-* udpate badminton
+* update badminton
 * ??
 
 local:
