@@ -7,6 +7,31 @@ categories: medwardsBadminton
 Each of our team has matches every week against other college, below are the results :)
 
 *Note: for the results below, the first numbers are the scores of ME teams*
+
+Lent Term
+<table>
+<tr>
+  <td colspan = "3" align = "center"> ME I </td>
+  <td colspan = "3" align = "center"> ME II </td>
+</tr>
+<tr>
+  <td> Date </td>
+  <td> Opponent </td>
+  <td> Result </td>
+  <td> Date </td>
+  <td> Opponent </td>
+  <td> Result </td>
+</tr>
+<tr>
+  <td> 28 Jan 2018 </td>
+  <td> Catz </td>
+  <td> 9:0 </td>
+  <td>  </td>
+  <td>  </td>
+  <td>  </td>
+</tr></table>
+
+Michealmas Term
 <table>
 <tr>
   <td colspan = "3" align = "center"> ME I </td>
