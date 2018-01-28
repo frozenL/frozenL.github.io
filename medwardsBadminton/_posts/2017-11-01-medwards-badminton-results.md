@@ -30,8 +30,8 @@ Lent Term
   <td>  </td>
   <td>  </td>
 </tr></table>
-
-
+<br/>
+<br/>
 Michealmas Term
 <table>
 <tr>
