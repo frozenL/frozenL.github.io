@@ -7,10 +7,9 @@ categories: medwardsBadminton
 Each of our team has matches every week against other college, below are the results :)
 
 *Note: for the results below, the first numbers are the scores of ME teams*
-<br/>
-<br/>
-Lent Term
+
 <table>
+  <tr><td colspan = "6" align = "left">Lent Term</td></tr>
 <tr>
   <td colspan = "3" align = "center"> ME I </td>
   <td colspan = "3" align = "center"> ME II </td>
@@ -30,11 +29,8 @@ Lent Term
   <td>  </td>
   <td>  </td>
   <td>  </td>
-</tr></table>
-<br/>
-<br/>
-Michealmas Term
-<table>
+</tr>
+  <tr><td colspan = "6" align = "left">Michelmas Term</td></tr>
 <tr>
   <td colspan = "3" align = "center"> ME I </td>
   <td colspan = "3" align = "center"> ME II </td>
