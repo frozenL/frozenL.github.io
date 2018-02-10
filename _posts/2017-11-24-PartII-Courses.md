@@ -16,3 +16,4 @@ useful readings
 
 ## MLBI
 * [cnn-anpr](https://matthewearl.github.io/2016/05/06/cnn-anpr)
+* [Bayesian decision theory](http://www.cogsci.ucsd.edu/~ajyu/Teaching/Tutorials/bayes_dt.pdf)
