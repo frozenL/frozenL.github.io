@@ -20,3 +20,4 @@ useful readings
 
 ## AG
 * [simple cube](https://www.tutorialspoint.com/jogl/jogl_3d_cube.htm)
+* [matrices](https://solarianprogrammer.com/2013/05/22/opengl-101-matrices-projection-view-model/)
