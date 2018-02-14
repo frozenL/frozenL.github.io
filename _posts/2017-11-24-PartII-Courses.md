@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PartII Michaelmas Term Courses
+title: PartII Courses
 date: 2017-11-24
 ---
 
@@ -22,3 +22,4 @@ useful readings
 * [simple cube](https://www.tutorialspoint.com/jogl/jogl_3d_cube.htm)
 * [matrices](https://solarianprogrammer.com/2013/05/22/opengl-101-matrices-projection-view-model/)
 * [a textured cube](http://www.opengl-tutorial.org/beginners-tutorials/tutorial-5-a-textured-cube/)
+* [orthographic tutorial](https://tutorialedge.net/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/)
