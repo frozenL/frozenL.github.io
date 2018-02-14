@@ -23,3 +23,4 @@ useful readings
 * [matrices](https://solarianprogrammer.com/2013/05/22/opengl-101-matrices-projection-view-model/)
 * [a textured cube](http://www.opengl-tutorial.org/beginners-tutorials/tutorial-5-a-textured-cube/)
 * [!!orthographic tutorial](https://tutorialedge.net/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/)
+* [matrices](http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices/#the-model-view-and-projection-matrices)
