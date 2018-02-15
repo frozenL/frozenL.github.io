@@ -25,3 +25,4 @@ useful readings
 * [!!orthographic tutorial](https://tutorialedge.net/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/)
 * [matrices](http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices/#the-model-view-and-projection-matrices)
 * [Blinn-Phong reflection model in GLSL](http://sunandblackcat.com/tipFullView.php?l=eng&topicid=30&topic=Phong-Lighting)
+* [Lighting tutorials](https://learnopengl.com/Lighting/Colors)
