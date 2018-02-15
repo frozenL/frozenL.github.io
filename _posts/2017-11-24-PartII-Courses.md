@@ -26,3 +26,4 @@ useful readings
 * [matrices](http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices/#the-model-view-and-projection-matrices)
 * [Blinn-Phong reflection model in GLSL](http://sunandblackcat.com/tipFullView.php?l=eng&topicid=30&topic=Phong-Lighting)
 * [Lighting tutorials](https://learnopengl.com/Lighting/Colors)
+* [a very good tutorial..](https://learnopengl.com)
