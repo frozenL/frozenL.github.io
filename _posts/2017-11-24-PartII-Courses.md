@@ -27,3 +27,6 @@ useful readings
 * [Blinn-Phong reflection model in GLSL](http://sunandblackcat.com/tipFullView.php?l=eng&topicid=30&topic=Phong-Lighting)
 * [Lighting tutorials](https://learnopengl.com/Lighting/Colors)
 * [a very good tutorial..](https://learnopengl.com)
+
+## S-II
+* [SHA-1](https://www.youtube.com/watch?v=DMtFhACPnTY)
