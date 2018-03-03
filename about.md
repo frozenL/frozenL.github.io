@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-about ... a compsci?
+suffer worst education
