@@ -33,6 +33,7 @@ useful readings
 * [Blending SDFs](http://www.iquilezles.org/www/articles/smin/smin.htm)
 * [spectrum to a colour](https://scipython.com/blog/converting-a-spectrum-to-a-colour/)
 * [negative values](https://photo.stackexchange.com/questions/67990/what-should-i-do-with-negative-values-when-computing-srgb-colors-from-spectra)
+* [ssao](https://www.gamedev.net/articles/programming/graphics/a-simple-and-practical-approach-to-ssao-r2753/)
 
 ## S-II
 * [SHA-1](https://www.youtube.com/watch?v=DMtFhACPnTY)
