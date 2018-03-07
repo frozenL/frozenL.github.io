@@ -32,6 +32,7 @@ useful readings
 * [one-ring curvature](https://computergraphics.stackexchange.com/questions/1718/what-is-the-simplest-way-to-compute-principal-curvature-for-a-mesh-triangle)
 * [Blending SDFs](http://www.iquilezles.org/www/articles/smin/smin.htm)
 * [spectrum to a colour](https://scipython.com/blog/converting-a-spectrum-to-a-colour/)
+* [negative values](https://photo.stackexchange.com/questions/67990/what-should-i-do-with-negative-values-when-computing-srgb-colors-from-spectra)
 
 ## S-II
 * [SHA-1](https://www.youtube.com/watch?v=DMtFhACPnTY)
