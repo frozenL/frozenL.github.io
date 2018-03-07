@@ -31,6 +31,7 @@ useful readings
 * [Gaussian curvature](https://math.stackexchange.com/questions/70210/is-there-any-easy-way-to-understand-the-definition-of-gaussian-curvature)
 * [one-ring curvature](https://computergraphics.stackexchange.com/questions/1718/what-is-the-simplest-way-to-compute-principal-curvature-for-a-mesh-triangle)
 * [Blending SDFs](http://www.iquilezles.org/www/articles/smin/smin.htm)
+* [spectrum to a colour](https://scipython.com/blog/converting-a-spectrum-to-a-colour/)
 
 ## S-II
 * [SHA-1](https://www.youtube.com/watch?v=DMtFhACPnTY)
