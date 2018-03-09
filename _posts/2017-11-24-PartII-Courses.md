@@ -18,6 +18,7 @@ useful readings
 * [cnn-anpr](https://matthewearl.github.io/2016/05/06/cnn-anpr)
 * [Bayesian decision theory](http://www.cogsci.ucsd.edu/~ajyu/Teaching/Tutorials/bayes_dt.pdf)
 * [CMU course link](https://www.cs.cmu.edu/afs/cs/academic/class/15782-f06/)
+* [MIT course in 2002](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-825-techniques-in-artificial-intelligence-sma-5504-fall-2002/index.htm)
 
 ## AG
 * [simple cube](https://www.tutorialspoint.com/jogl/jogl_3d_cube.htm)
