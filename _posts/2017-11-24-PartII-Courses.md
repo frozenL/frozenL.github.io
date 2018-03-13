@@ -40,6 +40,7 @@ useful readings
 * [ppd](https://www.toptal.com/designers/ui/the-industry-could-do-without-pixel-density-and-ppi-marketing)
 * [visual perception](http://www.ics.uci.edu/~majumder/vispercep/vispercep.htm)
 * [tone-mapping](https://www.cl.cam.ac.uk/~rkm38/pdfs/tone_mapping.pdf)
+* [CSF](https://www.cl.cam.ac.uk/~rkm38/pdfs/mantiuk2016perceptual_display.pdf)
 
 ## S-II
 * [SHA-1](https://www.youtube.com/watch?v=DMtFhACPnTY)
