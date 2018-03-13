@@ -38,6 +38,7 @@ useful readings
 * [retinex](https://dragon.larc.nasa.gov/retinex/757/)
 * [ppi vs. dpi](https://99designs.co.uk/blog/tips-en-gb/ppi-vs-dpi-whats-the-difference/)
 * [ppd](https://www.toptal.com/designers/ui/the-industry-could-do-without-pixel-density-and-ppi-marketing)
+* [visual perception](http://www.ics.uci.edu/~majumder/vispercep/vispercep.htm)
 
 ## S-II
 * [SHA-1](https://www.youtube.com/watch?v=DMtFhACPnTY)
