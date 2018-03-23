@@ -4,6 +4,8 @@ title: PartII Courses
 date: 2017-11-24
 ---
 
+[citeseerx](http://citeseerx.ist.psu.edu/index)
+
 Highly unstructured:
 
 ## Types
