@@ -47,3 +47,6 @@ useful readings
 
 ## S-II
 * [SHA-1](https://www.youtube.com/watch?v=DMtFhACPnTY)
+
+## Bioinformatics
+* [Clustering - UCSD](https://cseweb.ucsd.edu/classes/sp11/cse181-a/SLKP/Clustering.pdf)
