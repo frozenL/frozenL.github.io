@@ -50,3 +50,5 @@ useful readings
 
 ## Bioinformatics
 * [Clustering - UCSD](https://cseweb.ucsd.edu/classes/sp11/cse181-a/SLKP/Clustering.pdf)
+* [Markov clustering](https://micans.org/mcl/)
+
