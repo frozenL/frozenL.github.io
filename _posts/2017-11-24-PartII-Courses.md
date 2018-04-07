@@ -9,7 +9,7 @@ date: 2017-11-24
 Highly unstructured:
 
 ## Types
-useful readings
+readings
 * Girard, J-Y. (tr. Taylor, P. & Lafont, Y.) (1989). Proofs and types. Cambridge University Press.
     * Chapter 11: System F (PLC) 
 * Pierce, B. C. (Ed.) (2005). Advanced Topics in Types and Programming Languages. MIT Press.
@@ -51,4 +51,6 @@ useful readings
 ## Bioinformatics
 * [Clustering - UCSD](https://cseweb.ucsd.edu/classes/sp11/cse181-a/SLKP/Clustering.pdf)
 * [Markov clustering](https://micans.org/mcl/)
+readings:
+* R. Durbin, S. Eddy, A. Krogh, Mitchison. Biological sequency analysis. Cambridge University Press.
 
