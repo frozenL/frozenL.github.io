@@ -22,6 +22,7 @@ readings
 * [CMU course link](https://www.cs.cmu.edu/afs/cs/academic/class/15782-f06/)
 * [MIT course in 2002](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-825-techniques-in-artificial-intelligence-sma-5504-fall-2002/index.htm)
 * [Bayesian Methods for Neural Networks](https://www.cs.cmu.edu/afs/cs/academic/class/15782-f06/slides/bayesian.pdf)
+* [Probability](https://www.probabilitycourse.com)
 
 ## AG
 * [simple cube](https://www.tutorialspoint.com/jogl/jogl_3d_cube.htm)
