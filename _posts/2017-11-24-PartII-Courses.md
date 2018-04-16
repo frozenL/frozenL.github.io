@@ -56,3 +56,5 @@ readings
 readings:
 * R. Durbin, S. Eddy, A. Krogh, Mitchison. Biological sequency analysis. Cambridge University Press.
 
+## IR
+* [Introduction to IR](https://nlp.stanford.edu/IR-book)
