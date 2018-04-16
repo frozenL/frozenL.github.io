@@ -58,3 +58,4 @@ readings:
 
 ## IR
 * [Introduction to IR](https://nlp.stanford.edu/IR-book)
+* [Naive Bayes](https://stats.stackexchange.com/questions/33185/difference-between-naive-bayes-multinomial-naive-bayes)
