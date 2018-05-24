@@ -52,6 +52,7 @@ readings
 ## Bioinformatics
 * [Clustering - UCSD](https://cseweb.ucsd.edu/classes/sp11/cse181-a/SLKP/Clustering.pdf)
 * [Markov clustering](https://micans.org/mcl/)
+* [supervisions](https://github.com/seb-mueller/supervision_bioinformatics_partII_compsci)
 
 readings:
 * R. Durbin, S. Eddy, A. Krogh, Mitchison. Biological sequency analysis. Cambridge University Press.
