@@ -8,3 +8,4 @@ brew install watchman
 
 * [Deploying a React Native App for iOS](https://medium.com/react-native-development/deploying-a-react-native-app-for-ios-pt-1-a79dfd15acb8)
 * [vscode: disable automatic import correction](https://stackoverflow.com/questions/47350589/how-to-disable-automatic-import-statements-in-vscode-october-2017)
+* [watchman issue with macos](https://github.com/react-community/create-react-native-app/issues/234)
