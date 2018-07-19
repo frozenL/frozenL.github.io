@@ -26,7 +26,7 @@ the definitions inside a block shadow definitions of the same names outside the 
 tail recursion: if a function calls itself as its last action, the function's stack frame can be reused
 
 specify in Spark, e.g.:
-```
+```scala
 @tailrec
 def gcd(a: Int, b: Int): Int = ...
 ```
@@ -55,16 +55,35 @@ week 2: Higher order functions
   - CBN: e.g. ```(y: => Double)```
 - classes
   - type: 
-  ```
+  ```scala
   class Rational(x: Int, y: Int) {
     def numer = x
     def denom = y
   }
   ```
+  - constructors: 
+    - primary constructor
+    - alternatives:
+    ```scala
+    def this(x: Int) = this(x,1)
+    ```
   - methods: packaged functions operating on a data abstraction in the data abstraction itself
   - object: 
-  ```
+  ```scala
   val x = new Rational(1,2)
   x.numer
   x.denom
   ```
+
+  - requirement:
+    - ```require(y != 0, "denominator must be zero")```
+    - throws ```IllegalArgumentException```  
+    - used to enforce a precondition on the caller of a function
+  - assert:
+    - ```assert(x >= 0)```
+    - throws ```AssertionError```  
+    - used to check the code of the function itself
+- operators
+  - infix notation:  
+  any method with a parameter can be used like an infix operator
+  - relaxed identifiers
