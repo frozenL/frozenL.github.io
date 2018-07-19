@@ -9,7 +9,8 @@ setup Eclipse
 * [import into Eclipse](https://stackoverflow.com/questions/38048451/unable-to-work-on-imported-sbt-project-on-eclipse-scala-ide)
 
 week 1
----
+--- 
+<details><div markdown="1">
 semicolons:
 normally omitted, unless there are more than one statements on a line
 - expressions that span several lines: 
@@ -30,9 +31,12 @@ specify in Spark, e.g.:
 @tailrec
 def gcd(a: Int, b: Int): Int = ...
 ```
+</div>
+</details>
 
 week 2: Higher order functions
 ---
+<details><div markdown="1">
 - higher order functions: functions that take other functions as parameters or that return functions as results
 - anonymous functions:
   - e.g. (x: Int) => x * x * x
@@ -87,3 +91,90 @@ week 2: Higher order functions
   - infix notation:  
   any method with a parameter can be used like an infix operator
   - relaxed identifiers
+</div></details>
+
+week 3: data and abstraction
+---
+<details><div markdown="1">
+- abstract classes:
+```scala
+abstract class IntSet {
+  def incl(x: Int): IntSet
+  def contains(x: Int): Boolean
+}
+```
+- implementation:
+```scala
+class Empty extends IntSet {
+  def incl(x: Int): IntSet = false
+  def contains(x: Int): Boolean = new NonEmpty(x, new Empty, new Empty)
+}
+```
+- overriding:
+```scala
+class Sub extends Base {
+  override def foo = 2
+}
+```
+- object definition: defines a singleton object, no other instances can be created
+```scala
+object Empty extends IntSet {
+  ...
+}
+```
+- <span style="color:red">dynamic binding</span>:  
+the code invoked by a method call depends on the runtime type of the object that contains the method
+- class organisations
+  - pakages
+  ```scala
+  package progfun.examples
+  object Hello {...}
+  scala progfun.examples.Hello
+  ```
+    - named imports:
+      - ```import week3.Rational```
+      - ```import week3.{Rational, Hello}```
+    - wildcard imports: ```import wee3._```
+  - traits: like an abstract class, resemble interfaces in Java  
+  classes can inherit from at most one class but arbitrary many traits
+  ```scala
+  trait Planar {
+    def height: Int
+    def width: Int
+    def surface = height * width
+  }
+  class Square extends Shape with Planar with Movable...
+  ```
+  - exceptions:
+    - e.g. ```throw Exc```
+    - type: ```Nothing```
+  - null type: ```val x = null```
+- polymorphism
+  - meaning:
+    - the function can be applied to arguments of many types
+    - the type can have instances of many types
+  - <span style='color:red'>principle forms</span>:
+    - subtyping:
+    - generics:
+  - cons-list:
+    - Nil
+    - Cons
+    - in Scala, polymorphic:
+    ```scala
+    trait List[T] ...
+    class Cons(val head: T, val tail: List[T]) extends List[T]...
+    class Nil[T] extends List[T] ...
+    ```
+  - Type parameter
+    - for classes
+    - for functions:
+    ```scala
+    def singleton[T](elem: T) = new Cons[T](elem, new Nil[T])
+    singleton[Int](1)
+    ```
+  - Type inference:  
+    The Scala compiler can deduce the type parameters from the value arguments of a function call
+  - <span style = 'color:red'>Type erasure</span>:  
+    assume that all type parameters and type arguments are removed before evaluating the program
+  </div>
+  </details>
