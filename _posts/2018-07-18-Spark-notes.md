@@ -180,6 +180,7 @@ the code invoked by a method call depends on the runtime type of the object that
 
 week 4: types and pattern matching
 ---
+<details><div markdown="1">
 - pure object orientation:  
 every value is an object
 - functions as objects:
@@ -267,3 +268,4 @@ every value is an object
     - Nil
     - p::ps
     - List(p1, ..., pn)
+</div></details>
