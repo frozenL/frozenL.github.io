@@ -269,3 +269,77 @@ every value is an object
     - p::ps
     - List(p1, ..., pn)
 </div></details>
+
+week 5: Lists
+---
+<details><div markdown="1">
+- methods
+  - xs.length
+  - xs.head, xs.tail
+  - xs.last, xs.init
+  - xs take n: a list consisting of the first n elements of xs, or xs itself if it is shorter than n
+  - xs drop n: the rest of the collection after taking n elements
+  - xs(n)
+  - xs ++ ys or xs ::: ys
+  - xs.reverse
+  - xs update (n, x): contains x at index n
+  - xs indexOf x
+  - xs contains x
+- pairs and tuples
+- implicit parameters
+  - parameterisation with Ordering: ```scala.math.Ordering[T]```
+    ```scala
+    def msort[T](xs: List[T])(ord: Ordering) = 
+      def merge(xs: List[T], ys: List[T]): List[T] = ... if(ord.lt(x, y)) ...
+      ...
+      merge(msort(fst)(ord), msort(snd)(ord))
+      ...
+    ```
+  - implicit parameters:  
+    leave out the actual parameter in the call
+    ```scala
+    def msort[T](xs: List[T])(implicit ord: Ordering) = 
+      def merge(xs: List[T], ys: List[T]): List[T] = ... if(ord.lt(x, y)) ...
+      ...
+      merge(msort(fst), msort(snd))
+      ...
+    ```
+- higher-order list functions
+  - map
+    ```scala
+    xs map (x => x * x)
+    ```
+  - filters
+    - xs filterNot p
+    - xs partition p = (xs filter p, xs filterNot p)
+    - xs takeWhile p:  
+      the longest prefix of list xs that consisting of elements that all satisfy the predicate p
+    - xs dropWhile p:  
+      the remainder of the list xs after any leading elements satisfying p have been removed
+    - xs span p: (xs takeWhile p, xs dropWhile p)
+  - reduction of lists
+    - sum: ```sum(List(x1, ..., xn))```
+    - product: ```product(List(x1, ..., xn))```
+    - reductLeft:
+    ```scala
+    List(x1, ..., xn) reduceLeft op = (...(x1 op x2) op ...) op xn
+    def sum(xs: List[Int]) = (0 :: xs) reduceLeft (_ + _)
+    def product(xs: List[Int]) = (1 :: xs) reduceLeft (_ * _)
+    ```
+    - foldLeft:  
+    with an accumulator
+    ```scala
+    (List(x1, ..., xn) foldLeft z)(op) = (...(z op x1) op ...) op xn
+    def sum(xs: List[Int]) = (xs foldLeft 0)(_ + _)
+    def product(xs: List[Int]) = (xs foldLeft 1)(_ * _)
+    ```
+    - foldRight:
+    ```scala
+    (List(x1, ..., xn) foldRight acc)(op) = x1 op (...(xn op acc))
+    ```
+- structural induction
+  - <span style='color:red'>referential transparancy</span>
+  - prove a property P(xs) for all lists xs:
+    - P(Nil) holds
+    - if P(xs) holds then P(x::xs) holds
+</div></details>
