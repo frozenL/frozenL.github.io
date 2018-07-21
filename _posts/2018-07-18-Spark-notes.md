@@ -176,5 +176,94 @@ the code invoked by a method call depends on the runtime type of the object that
     The Scala compiler can deduce the type parameters from the value arguments of a function call
   - <span style = 'color:red'>Type erasure</span>:  
     assume that all type parameters and type arguments are removed before evaluating the program
-  </div>
-  </details>
+</div></details>
+
+week 4: types and pattern matching
+---
+- pure object orientation:  
+every value is an object
+- functions as objects:
+  function values are treated as objects in Scala  
+  A => B is an abbreviation for the class scala.Function1[A, B]  
+  Function1: the function for a single argument
+  ```scala
+  package scala
+  trait Function1[A, B] {
+    def apply(x: A): B
+  }
+  // traits Function2, Function3, ...
+  ```
+  - expansion of function values:
+    - anonymous function:
+    ```scala
+    (x: Int) => x * x
+    new Function1[Int, Int] {
+      def apply(x: Int) = x * x
+    }
+    ```
+    - <span style = 'color: red'>eta-expansion</span>
+- type bounds
+  - e.g. 
+  ```scala
+  def assertAllPos[S <: IntSet](r: S): S = ...
+  ```
+  - upper bound:```[S <: IntSet]```  
+  S can be instantiated only to types that conform to IntSet
+  - lower bound: ```[S >: NonEmpty]```
+  - mixed bound: ```[S >: NonEmpty <: IntSet]```
+  - covariance:  
+  ```NonEmpty <: IntSet``` then ```List[NonEmpty] <: List[IntSet]```  
+  Arrays in Java are covariant, not covariant in Scala because they are mutable  
+  However, Lists are covariant in Scala (immutable)
+  - Liskov substitution principle  
+  if A <: B, then everything one can do with a value of type B should also be able to do with a value of type A
+  - variance:
+    - definitions: assume A <: B, C is
+      - covariant if C[A] <: C[B], in Scala: 
+        ```class C[+A] {...}```
+      - contravariant if C[A] >: C[B]
+        ```class C[-A] {...}```
+      - nonvariant if neither C[A] nor C[B] is a subtype of the other
+        ```class C[A] {...}```
+    - typing rules for functions:  
+      - if A2 <: A1 and B1 <: B2 then ```A1 => B1 <: A2 => B2```  
+      - e.g.
+      ```scala
+      type A = IntSet => NonEmpty
+      type B = NonEmpty => IntSet
+      A <: B
+      ```
+      - functions are contravariant in their argument types and covariant in their result types
+    - <span style='color:red'>variance check</span>
+- decomposition
+  - type tests:
+  ```scala
+  def isInstanceOf[T]: Booelean
+  x.isInstanceOf[T]
+  ```
+  - type casts:
+  ```scala
+  def asInstanceOf[T]: T
+  x.asInstanceOf[T]
+  ```
+  - pattern matching
+    - case classes
+    ```scala
+    trait Expr
+    case class Number(n: Int) extends Expr
+    case class Sum(e1: Expr, e2: Expr) extends Expr
+    def eval(e: Expr): Int = e match {
+      case Number(n) => n
+      case Sum(e1, e2) => eval(e1) + eval(e2)
+    }
+    ```
+- List
+  - right associativity: ```val nums = 1 :: 2 :: 3 :: Nil```
+  - operations:
+    - head
+    - tail
+    - isEmpty
+  - List patterns:
+    - Nil
+    - p::ps
+    - List(p1, ..., pn)
