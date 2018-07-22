@@ -343,3 +343,76 @@ week 5: Lists
     - P(Nil) holds
     - if P(xs) holds then P(x::xs) holds
 </div></details>
+
+week 6: collections
+---
+<details><div markdown="1">
+- Vector
+  - create:
+  ```scala
+  val nums = Vector(1, 2, 3, -88)
+  val people = Vector('Bob', 'James', 'Peter')
+  ```
+  - operations:
+    - ```x +: xs``` create a new vector with leading element x, followed by all elements of xs
+    - ```xs :+ x``` create a new vector with trailing element x, preceded by all elements of xs
+- collection hierarchy
+  - Seq: a common base class of List and Vector
+    - Range: a sequence of evenly spaced integers
+      - operations:
+        - to (inclusive)
+        - until (exclusive in the upper bound)
+        - by (to determine step value)
+      - e.g.
+      ```scala
+      val r: Range = 1 until 5 // 1, 2, 3, 4
+      val s: Range = 1 to 5 // 1, 2, 3, 4, 5
+      ```
+    - operations:
+      - xs exists p
+      - xs forall p
+      - xs zip ys
+      - xs.unzip
+      - xs.flatMap f:  
+      apply a function that returns a sequence for each element in the list, and flattening the results into the original list
+      - xs.sum
+      - xs.product
+      - xs.max
+      - xs.min
+  - Iterable: a common base class of Seq, Set, Map
+- nested sequences
+  - e.g. 
+  ```scala
+  (1 until n) flatMap (i => (1 until i) map (j => (i, j))) filter (pair => isPrime(pair._1 + pair._2))
+  ```
+  - for expression
+    - form:```for(s) yield e```
+    - e.g.
+    ```scala
+    for (p <- persons if p.page > 20) yield p.name
+    for {
+      i <- 1 until n
+      j <- 1 until i
+      if isPrime(i + j)
+    } yield (i, j)
+    ```
+- Sets
+- Maps: ```Map[Key, Value]```
+  - e.g.
+  ```scala
+  val romanNumerals = Map('I' -> 1, 'V' -> 5, 'X' -> 10)
+  ```
+  - ```map get key``` returns:
+    - None: if map does not contain the given key
+    - Some(x)
+  - ```withDefaultValue``` turns a map into a total function:
+    ```scala
+    val cap1 = capitalOfCountry withDefaultValue "<unknown>"
+    cap1("Andorra") // "<unknown>"
+    ```
+- groupBy
+  - e.g.
+  ```scala
+  fruit groupBy (_.head)
+  ```
+</div></details>
