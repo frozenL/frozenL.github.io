@@ -71,3 +71,39 @@ week 1
     m flatMap unit == m
     ```
 </div></details>
+
+week 2: lazy evaluation
+---
+<details><div markdown="1">
+- structural induction on Trees:  
+  to prove a property P(t) for all trees t of a certain type
+  - P(l) holds for all leaves l of a tree
+  - for each type of internal node t with subtrees s1, ..., sn, show that P(s1) ^ ... ^ P(sn) implies P(t)
+- streams
+  - delayed evaluation:  
+    avoid computing the tail of a sequence until it is needed for the evaluation result
+  - definition
+    ```scala
+    val xs = Stream.cons(1, Stream.cons(2, Stream.empty))
+    Stream(1,2,3)
+    (1 to 1000).toStream
+    ```
+  - #:: operator:
+  ```x #:: xs == Stream.cons(x, xs)```
+- lazy evaluation
+- computing with infinite sequences:
+  - all natural numbers:
+    ```scala
+    def from(n: Int): Stream[Int] = n #:: from(n + 1)
+    val nats = from(0)
+    nats map (_ * 4)
+    ```
+  - the sieve of eratothenes:  
+    an ancient technique to calculate prime numbers
+    ```scala
+    def sieve(s: Stream[Int]): Stream[Int] = 
+      s.head #:: sieve(s.tail filter (_ % s.head == 0))
+    ```
+</div></details>
+
+  
