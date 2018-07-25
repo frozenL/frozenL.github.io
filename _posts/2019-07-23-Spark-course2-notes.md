@@ -106,4 +106,45 @@ week 2: lazy evaluation
     ```
 </div></details>
 
+week 3: functions and state
+---
+<details><div markdown="1">
+- stateful objects:
+  - definition: var in place of val
+  ```scala
+  var x: String = "abc"
+  var count = 111
+  ```
+- identity and change
+  - once we allow the assignment, then x and y are different
+  ```scala
+  val x = new BankAccount
+  val y = new BankAccount
+  ```
+  - operational equivalence:  
+  two definitions x and y are operationally equivalent if no possible test can distinguish between them.
+  - the substitution model ceases to be valid when we add the assignment: e.g.
+  ```scala
+  val x = new BankAccount
+  val y = x
+  ```
+  is equivalent to
+  ```scala
+  val x = new BankAccount
+  val y = new BankAccount
+  ```
+- loops:
+  - while
+  - for-loops: not for-expressions  
+    - e.g.
+    ```scala
+    for(i <- 1 until 3) { System.out.print(i + " ")}
+    ```
+    - translates to foreach
+    ```scala
+    def foreach(f : T => Unit): Unit = 
+    ```
+</div></details>
+
+
   
