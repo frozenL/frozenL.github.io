@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spark-course1-notes
+title: Scala-course1-notes
 date: 2018-07-11
 ---
 
