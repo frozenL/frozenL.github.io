@@ -146,5 +146,105 @@ week 3: functions and state
     ```
 </div></details>
 
+week 4: timely effects
+---
+<details><div markdown="1">
+- the observer pattern:  
+  widely used when views need to react to changes in a model
+  - publisher trait:
+  ```scala
+  trait Publisher {
+    private var subscribers: Set[Subscriber] = Set()
+    def subscribe(subscriber: Subscriber): Unit = 
+      subscribers += subscriber
+    def unsubscribe(subscriber: Subscriber): Unit =
+      subscribers -= subscriber
+    def publish(): Unit =
+      subscribers.foreach(_.handler(this))
+  }
+  ```
+  - subscriber trait:
+  ```scala
+  trait Subscriber {
+    def handler(pub: Publisher)
+  }
+  ```
+  - (+):
+    - decouples views from state
+    - allows to have a varying number of views of a given state
+    - simple to set up
+  - (-):
+    - forces imperative style
+    - many moving parts that need to be co-ordinated
+    - concurrency makes things more complicated
+    - views are still tightly bound to one state
+- (FRP) functional reactive programming
+  - reactive programming:  
+    reacting to sequences of events that happen in time
+  - functional view:  
+    aggregate an event sequence into a signal
+  - signals:  
+    - the relation between two signals is maintained automatically
+      ```scala
+      a() = 2
+      b() = 2 * a()
+      ```
+    - constant signals
+      ```scala
+      val sig = Signal(3)
+      ```
+    - time-varying signals
+      ```scala
+      val sig = Var(3)
+      sig.update(5) // can be abbreviated to:
+      sig() = 5
+      ```
+  - fundamental signal operations
+    - obtain the value of the signal at the current time
+      ```scala
+      mousePosition()
+      ```
+    - define a signal in terms of other signals
+      ```scala
+      def inReactangle(LL: Position, UR: Position): Signal[Boolean] =
+        Signal {
+          val pos = mousePosition()
+          LL <= pos && pos <= UR
+        }
+      ```
+  - to get around the problem of concurrent accesses to global state
+    - synchronisation:  
+      one way to get around the problem of concurrent accesses to global state
+      - (-):
+        - slow
+        - deadlocks
+    - thread-local state:  
+      - replace global state by thread-local state:  
+        each thread accesses a separate copy of a variable
+      - ```scala.util.DynamicVariable```
+    - implicit parameters
+- latency as an effect
+  - Futures
+    ```scala
+    import scala.concurrent._
+    import scala.concurrent.ExecutionContext.Implicits.global
+    trait Future[T] {
+      def onComplete(callback: Try[T] => Unit)
+        (implicit executor: ExecutionContext): Unit
+    }
+    ```
+  - Futures alternative designs
+    ```scala
+    trait Future[T] {
+      def onComplete(success: T => Unit, failed: Throwable => Unit): Unit
+      def onComplete(callback: Observer[T]): Unit
+    }
+    trait Observer[T] {
+      def onNext(value: T): Unit
+      def onError(error: Throwable): Unit
+    }
+    ```
+- give up
+</div></details>
 
-  
+
