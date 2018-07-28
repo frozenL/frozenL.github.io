@@ -88,3 +88,39 @@ week 1: parallel computing
   ```
 </div></details>
 
+week 2: basic task parallel algorithms
+---
+- parallel sorting
+  ```scala
+  def sort(from: Int, until: Int, depth: Int): Unit = {
+    if(depth == maxDepth) {
+      quickSort(xs, from, until - from)
+    } else {
+      val mid = (from + until) / 2
+      parallel(sort(mid, until, depth + 1) , sort(from, mid, depth + 1))
+      val flip = (maxDepth - depth) % 2 == 0
+      val src = if(flip) ys else xs
+      val dst = if(flip) xs else ys
+      merge(src, dst, from, mid, until)
+    }
+  }
+  sort(0, xs.length, 0)
+  ```
+- parallel fold operation
+  - fold:  
+    unable to enable parallel operations due to non-associative operations
+    ```scala
+    List(1, 3, 8).fold(100)((s, x) => s + x)
+    ```
+  - foldLeft, foldRight, reduceLeft, reduceRight
+- associative operations
+  - definition:  
+    Operation ```f: (A, A) => A``` is associative iff for every x, y, z:  
+    f(x, f(y, z)) = f(f(x, y), z)
+  - commutative:  
+    Operation ```f: (A, A) => A``` is commutative iff for every x, y:  
+    f(x, y) = f(y, x)
+- parallel scan left
+
+
+

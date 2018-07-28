@@ -264,6 +264,10 @@ every value is an object
     - head
     - tail
     - isEmpty
+    - scan:
+      ```scala
+      List(1, 3, 8).scan(100)((s, x) => s + x) == List(100, 101, 104, 112)
+      ```
   - List patterns:
     - Nil
     - p::ps
