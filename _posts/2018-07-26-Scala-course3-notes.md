@@ -90,6 +90,7 @@ week 1: parallel computing
 
 week 2: basic task parallel algorithms
 ---
+<details><div markdown="1">
 - parallel sorting
   ```scala
   def sort(from: Int, until: Int, depth: Int): Unit = {
@@ -121,6 +122,36 @@ week 2: basic task parallel algorithms
     Operation ```f: (A, A) => A``` is commutative iff for every x, y:  
     f(x, y) = f(y, x)
 - parallel scan left
+</div></details>
 
-
-
+week 3: data-parallelism
+---
+<details><div markdown="1">
+as opposed to task-parallelism
+- definition:  
+  a form of parallelism that distributes data across computing nodes.
+- data-parallelism programming model
+  ```scala
+  def initializeArray(xs: Array[Int])(v: Int): Unit = {
+    for(i <- (0 until xs.length).par) {
+      xs(i) = v
+    }
+  }
+  ```
+- operations
+  - e.g.
+    ```scala
+    (1 until 1000).par
+      .filter(n => n % 3 == 0)
+      .count(n => n.toString == n.toString.reverse)
+    ```
+    - fold
+      ```scala
+      def sum(xs: Array[Int]): Int = {
+        xs.par.fold(0)(_ + _)
+      } 
+      ```
+      - preconditions:
+        - ```f(a, f(b,c)) == f(f(a, b), c)```
+        - ```f(z, a) == f(a, z) == a```
+</div></details>
