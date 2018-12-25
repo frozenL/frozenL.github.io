@@ -52,9 +52,12 @@ Golang
     a = int(b) // conversion works
   }
   ```
+  - underlying type: each type T has an underlying type, if T is one of the predeclared boolean, numeric, or string types, or a type literal, the corresponding underlying type is T itself. Otherwise, T's underlying type is the underlying type of the type to which T refers in its type declaration. i.e. recursion
 - `fmt`
   - the verbs:
     - `%v`: the value in a default format
     - `%+v`: when printing structs, adds field names
     - `$#v`: a Go-syntax representation of the value
     - `%%`: a literal percent sign; consumes no value
+    
+**?** shadow
