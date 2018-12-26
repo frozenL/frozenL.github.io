@@ -92,4 +92,62 @@ Golang
     - `$#v`: a Go-syntax representation of the value
     - `%%`: a literal percent sign; consumes no value
     
+- control flow
+  - loop: no `while`
+    - format
+    ```golang
+    for init; cond; post {}
+    for cond { S() }
+    for ; cond; { S() }
+    ```
+    - `while` equivalent: `for {}`
+  - conditional
+    - `if true {}`
+    - only one assignment: `if x := 42; x == 2 {}`
+    - `switch`
+      - switch on nothing:
+      ```golang
+      switch {
+      case false:
+        fmt.Println("1") // won't print
+      case (2 == 4):
+        fmt.Println("2") // won't print
+      case true:
+        fmt.Println("3") // prints
+      case (3 == 3):
+        fmt.Println("4") // won't print
+      }
+      ```
+      - `fallthrough`, evaluate the next case too
+      ```golang
+      switch {
+      case false:
+        fmt.Println("1") // won't print
+      case (2 == 4):
+        fmt.Println("2") // won't print
+      case true:
+        fmt.Println("3") // prints
+        fallthrough
+      case (3 == 3):
+        fmt.Println("4") // also prints
+      case (5 == 5):
+        fmt.Println("5") // won't print
+      }
+      ```
+      - `default:` will run when no case is evaulated to true. Can be put at any place.
+      - switch on value:
+      ```golang
+      switch "Bond" {
+      ... // same
+      }
+      ```
+      - can be presented in comma-separated lists:
+      ```golang
+      switch c {
+      case ' ', '?', '=':
+        fmt.Println("true")
+      }
+      ```
+      
+
 **?** shadow
