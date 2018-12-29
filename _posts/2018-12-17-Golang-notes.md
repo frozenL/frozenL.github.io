@@ -26,6 +26,7 @@ Golang
   - booleans: `false`
   - integers/floats: `0`
   - pointers, functions, interfaces, slices, channels, maps: `nil`
+    - map: "Map types are reference types, like pointers or slices, and so the value of m above is nil; it doesn't point to an initialized map. A nil map behaves like an empty map when reading, but attempts to write to a nil map will cause a runtime panic; don't do that.": [go maps](https://blog.golang.org/go-maps-in-action)
   - `var i int` == `var i int = 0`
   
 - types
