@@ -150,5 +150,73 @@ Golang
       }
       ```
       
+## data structure
+- array: building block for slices
+  - e.g. `var x [5]int`
+  - the length is part of the array's type, i.e. `var x [5]int` and `var x[6]int` are different types
+  ```golang
+  x := [1]int{1}
+  fmt.Printf("%T\n", x) // [1]int
+  ```
+- slice: composite data type
+  - e.g. `x := []int{4,5,6,7}`
+  - length: `len(x)`
+  - loop over the values in slices:
+  ```golang
+  x := []int{1,2,3,4,5}
+  for i, v := range(x) {}
+  ```
+  - slicing a slice
+    - print: `fmt.Println(x[1:])`
+    - upto but not including: `fmt.Println(x[1:3])`
+  - append to a slice
+    - signature: `func append(slice []T, elements ...T) []T`
+    - e.g.
+    ```golang
+    x = append(x, 4, 5, 6, 7)
+    // append a slice to a slice
+    y := []int{4,5,6}
+    x = append(x, y...) // only works for one y...
+    ```
+  - delete from a slice
+    - sol.1:
+    ```golang
+    x = append(x[:2], x[4:]...)
+    ```
+  - make:
+  ```golang
+  x := make([]int, 10, 100) // capacity = 100
+  x[10] = 1 // index out of range
+  x = append(x, 111) // works
+  ```
+  - multi-dimensional slice
+  ```golang
+  a := []string{"a", "b"}
+  b := []string{"a", "b"}
+  x := [][]string{a, b}
+  ```
+- map
+  - e.g.
+  ```golang
+  m := map[string]bool {
+    "a": true,
+  }
+  fmt.Println(m["b"]) // false
+  ```
+  - exists
+  ```golang
+  v, ok := m["b"] // v = false, ok = false
+  ```
+  - add elements
+  ```golang
+  m["todd"] = 33
+  ```
+  - range
+  ```golang
+  for k, v := range m {}
+  ```
+  - delete: 
+    - e.g. `delete(m, "a")`
+    - can also delete something that doesn't exist
 
 **?** shadow
