@@ -219,4 +219,45 @@ Golang
     - e.g. `delete(m, "a")`
     - can also delete something that doesn't exist
 
+- [struct](https://golang.org/ref/spec#Struct_types)
+  - type:
+  ```golang
+  type person struct {
+    age int
+    x, y string // can be in the same line
+  }
+  ```
+  - a value of type person:
+  ```golang
+  p2 := person {
+    age: 17,
+  }
+  ```
+  - embedded/anonymous field
+  ```golang
+  type secretAgent struct {
+    person
+    ltk bool
+  }
+  ```
+    - the unqualified type name acts as the field name
+    ```golang
+    sa1 := secretAgent{
+      person: person{
+        age: 17,
+      },
+      ltk: true,
+    }
+
+    fmt.Println(sa1.age, sa1.ltk) // the inner fields of person got promoted up to the higher level
+    ```
+    - if we have a name collision, the outer field is used by default
+  - anonymous structs
+  ```golang
+  p := struct {
+    age int
+  }{
+    age: 17,
+  }
+  ```
 **?** shadow
