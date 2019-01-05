@@ -260,4 +260,76 @@ Golang
     age: 17,
   }
   ```
-**?** shadow
+## functions
+everything in Go is pass by value
+- signature
+```golang
+func (r receiver) identifier (parameter(s)) (return(s)) { code }
+```
+- variadic parameters / function
+
+the one has to be the last parameter
+```golang
+func foo(x ...int) {
+  fmt.Printf("%T\n", x) // []int
+}
+```
+  - unfurling a slice `...`
+  ```golang
+  xi := []int{1,2,3,4,5}
+  x := foo(xi) // types don't match
+  x := foo(xi...) // OK
+  y := foo() // OK
+  ```
+- `defer`: invokes a function whose execution is deferred to the moment the surrounding function returns
+- methods: in a struct
+```golang
+  type secretAgent struct {}
+  func (s secretAgent) speak() {}
+```
+- [interface & polymorphism](https://golang.org/ref/spec#Interface_types)
+  
+  a value can be of more than one type. if an object has all the methods defined in an interface, it's of that type.
+  - ```golang
+  type human interface {
+    speak()
+  }
+  ```
+  - check type
+  ```golang
+  switch h.(type) {
+    case person:
+      ... // h.(person).first
+    case secretAgent:
+      ... // h.(secreteAgnet).first
+  }
+  ```
+  - e.g.
+  ```golang
+  func Println(a ...interface{}) (n int, err error)
+  ```
+- anonymous func
+```golang
+func() {
+  fmt.Println("Anonymous func ran")
+}()
+```
+- func expression
+```golang
+f := func() {}
+f()
+```
+- returning a func
+```golang
+func foo() func() int {
+  return func() int {
+    return 1
+  }
+}
+```
+- callback: passing a `func` as an argument
+- closure: limiting scope, e.g. the scope of variables
+- recursion: nothing special
+
+## questions?
+- shadow
