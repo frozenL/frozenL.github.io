@@ -331,5 +331,27 @@ func foo() func() int {
 - closure: limiting scope, e.g. the scope of variables
 - recursion: nothing special
 
+## pointers
+```golang
+a := 42
+fmt.Printf("%T\n", a) // int
+fmt.Printf("%T\n", &a) // *int
+fmt.Println(*&a) // 42
+*&a = 43
+fmt.Println(a) // 43
+```
+- pass pointers
+```golang
+func foo(y *int) {
+  *y = 43
+}
+```
+- [method sets](https://github.com/golang/go/wiki/MethodSets)
+  > The method set of any other named type T consists of all methods with receiver type T. The method set of the corresponding pointer type *T is the set of all methods with receiver *T or T (that is, it also contains the method set of T).
+  
+  come back later [7th Jan. 2019]
+
+
 ## questions?
 - shadow
+- method sets
