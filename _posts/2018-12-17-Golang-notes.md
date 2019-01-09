@@ -465,6 +465,58 @@ bs, err := bcrypt.GenerateFromPassword([]byte(s), bcrypt.MinCost) //
 err := bcrypt.CompareHashAndPassword(bs, []byte(s))
 ```
 
+## concurrency
+### runtime
+```golang
+fmt.Println("OS\t\t", runtime.GOOS)
+fmt.Println("ARCH\t\t", runtime.GOARCH)
+fmt.Println("CPUs\t\t", runtime.NumCPU())
+fmt.Println("Goroutines\t\t", runtime.NumGoroutine())
+```
+- Gosched: switch goroutines
+```golang
+go func() {
+  runtime.Gosched()
+}
+```
+### sync
+- WaitGroup
+```golang
+var wg sync.WaitGroup
+wg.Add(1)
+wg.Wait()
+func foo() {
+  wg.Done()
+}
+```
+- Mutex
+```golang
+var mu sync.Mutex
+go func() {
+  mu.Lock()
+  ...
+  mu.Unlock()
+}
+```
+- RWMutex
+```
+Lock()
+RLock()
+RLocker()
+RUnlock()
+Unlock()
+```
+- package: `sync/atomic`
+```golang
+var counter int64
+go func() {
+  atomic.AddInt64(&counter, 1)
+}
+```
+
+- channel
+don't want to have goroutines to return something back, use channels instead.
+
 ## questions?
 - shadow
 - method sets
