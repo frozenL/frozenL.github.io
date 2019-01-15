@@ -514,8 +514,47 @@ go func() {
 }
 ```
 
-- channel
+## channel
 don't want to have goroutines to return something back, use channels instead.
+```golang
+c := make(chan int)
+go func() {
+  c <- 42
+}()
+fmt.Println(<- c)
+```
+- [directional channel](https://gobyexample.com/channel-directions)
+> when using channels as function parameters, you can specify if a channel is meant to only send or receive values. 
+  - receive channel
+  ```golang
+  func ping(pings chan<- string, msg string) {
+    pings <- msg
+  }
+  ```
+  - sending channel
+  ```golang
+  func pong(pings <-chan string, pongs chan<- string) {
+    msg := <-pings
+    pongs <- msg
+  }
+  ```
+- range
+
+keeps looping over channel until the channel is closed
+```golang
+func main() {
+  c := make(chan int)
+  ...
+  for v := range c {
+  }
+  ...
+}
+
+func foo() {
+  close(c)
+}
+
+```
 
 ## questions?
 - shadow
