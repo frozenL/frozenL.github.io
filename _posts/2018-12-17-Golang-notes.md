@@ -555,6 +555,28 @@ func foo() {
 }
 
 ```
+- select
+- [concurrency patterns](https://blog.golang.org/pipelines)
+  - fan in
+  
+  > A function can read from multiple inputs and proceed until all are closed by multiplexing the input channels onto a single channel that's closed when all the inputs are closed
+
+  - fan out
+
+  > Multiple functions can read from the same channel until that channel is closed
+
+### [context](https://blog.golang.org/context)
+processor stops and goroutines still run??
+- use context to signal to goroutines, in case of goroutines leaking.
+- Background
+- WithCancel(context)
+```golang
+ctx := context.Background()
+ctx, cancel := context.WithCancel(ctx)
+ctx.Err() // <nil>
+cancel()
+ctx.Err() // context canceled
+```
 
 ## questions?
 - shadow
