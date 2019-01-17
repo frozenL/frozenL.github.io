@@ -578,6 +578,84 @@ cancel()
 ctx.Err() // context canceled
 ```
 
-## questions?
+### errors
+```golang
+package errors
+
+type error interface {
+  Error() string
+}
+```
+- check errors
+```golang
+panic(err)
+```
+- printing and logging
+```golang
+fmt.Println()
+log.Println() // by default, stdout
+log.SetOutput(...) // change output method
+log.Fatalln() // os.Exit()
+log.Panicln() // can use "recover"
+panic()
+```
+## Built-in functions
+### [recover](https://blog.golang.org/defer-panic-and-recover)
+```golang
+func main() {
+  f()
+  fmt.Println("Returned normally from f.")
+}
+
+func f() {
+  defer func() {
+    if r := recover(); r != nil {
+      fmt.Println("Recovered in f", r)
+    }
+  }()
+  fmt.Println("Calling g.")
+  g(0)
+  fmt.Println("Returned normally from g.")
+}
+
+func g(i int) {
+  if i > 3 {
+    fmt.Println("Panicking!")
+    panic(fmt.Sprintf("%v", i))
+  }
+  defer fmt.Println("Defer in g", i)
+  fmt.Println("Printing in g", i)
+  g(i + 1)
+}
+```
+
+# write go documentations
+## `go doc`
+```golang
+// this is a package
+package hey
+func foo() {
+}
+
+// go to a dir and run
+// $ go doc
+// prints the doc
+```
+## `godoc`
+extracts and generates documentation and runs a server
+```
+$ godoc -http :8080
+```
+## on godoc.org
+copy paste the source code url to godoc.org
+
+# testing
+- must
+  - `*_test.go`
+  - in the same package
+  - be in a func with an signature `func TestXxx(*testing.T)`
+
+
+# questions?
 - shadow
 - method sets
