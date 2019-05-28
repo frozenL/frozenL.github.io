@@ -155,3 +155,8 @@ as opposed to task-parallelism
         - ```f(a, f(b,c)) == f(f(a, b), c)```
         - ```f(z, a) == f(a, z) == a```
 </div></details>
+
+week 4: data structures for parallel computing
+---
+- conc-tree data structure:
+  - conc-tree: balanced tree
