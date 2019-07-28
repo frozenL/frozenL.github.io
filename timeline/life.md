@@ -16,4 +16,5 @@ travelling life
 - 30/11/2018-08/12/2018 France: Val Thorens
 - 19/04/2019-21/04/2019 Croatia: Dubrovnik
 - 24/05/2019-28/05/2019 Austria: Wien and Salzburg
-- 21/06/2019-23/06/2019 Malta: St Julian's
+- 21/06/2019-23/06/2019 Malta: St Julian's & Valletta
+- 12/07/2019-13/07/2019 UK: Abingdon, Oxfordshire
