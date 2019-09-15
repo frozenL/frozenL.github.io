@@ -1,4 +1,4 @@
-travelling life
+travelling
 ===============
 - 18/03/2017-20/03/2017 UK: Lake district
 - 02/04/2017 UK: Southend-on-sea
@@ -18,3 +18,4 @@ travelling life
 - 24/05/2019-28/05/2019 Austria: Wien and Salzburg
 - 21/06/2019-23/06/2019 Malta: St Julian's & Valletta
 - 12/07/2019-13/07/2019 UK: Abingdon, Oxfordshire
+- 15/09/2019-15/09/2019 UK: Birmingham
