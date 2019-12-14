@@ -19,3 +19,5 @@ travelling
 - 21/06/2019-23/06/2019 Malta: St Julian's & Valletta
 - 12/07/2019-13/07/2019 UK: Abingdon, Oxfordshire
 - 15/09/2019-15/09/2019 UK: Birmingham
+- 08/11/2019-10/11/2019 Portugal: Lisbon
+- 09/12/2019-12/12/2019 UK: Edinburgh
